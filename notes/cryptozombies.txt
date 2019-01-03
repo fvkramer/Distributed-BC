@@ -79,3 +79,16 @@ Person[] people;   - array of Person struct named people
 
 Person[] public people;  -- creates a public array with a getter method
 other contracts can read from it
+
+# Functions
+
+function parameters start with _ to differentiate from globals
+
+
+function(string _name, uint _dna) {
+  zombies.push()
+}
+
+people.push(Person(16, "Vitalik"));
+
+^ pushes into array an instance of new Person struct
