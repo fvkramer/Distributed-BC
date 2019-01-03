@@ -4,6 +4,8 @@ Integer DNA with different digit sequences mapping to different points
 
 Solidity code encapsulated in Contracts
 
+shell for contract
+
 contract HelloWorld {
 
 }
@@ -17,3 +19,63 @@ with future compilers
 "version pragma"
 
 pragma solidity ^0.4.25;
+
+_____
+
+Variables
+
+State Variables permanently stored in contract storage.
+Written into Ethereum Blockchain
+Similar to writing to DB
+
+
+Unsigned vs Signed Integer
+
+Unsigned - uses left most bit as integer. Larger positive value
+Signed Int. - left most bit is sign. 
+
+
+** In Soliditiy, uint is alias for uint256, a 256-bit unsigned integer.
+
+ex: 
+
+uint name = 16;
+uint8 eight = 8;
+
+** To make integer certain amount of digits...
+    int % (10 ^ num_digits)
+
+---------
+
+# Struct
+
+more complext datatype with multiple properties
+
+struct Person {
+  uint age;
+  string name;
+}
+
+*******
+Two types of Arrays in Solidity
+
+Fixed and Dynamic
+
+// Array with a fixed length of 2 elements:
+
+uint[2] fixedArray;
+
+// another fixed Array, can contain 5 strings:
+
+string[5] stringArray;
+
+// a dynamic Array - has no fixed size, can keep growing:
+
+uint[] dynamicArray;
+
+Can also create arrays of Structs
+
+Person[] people;   - array of Person struct named people
+
+Person[] public people;  -- creates a public array with a getter method
+other contracts can read from it
