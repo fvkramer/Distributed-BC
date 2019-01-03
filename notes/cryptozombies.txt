@@ -1,0 +1,19 @@
+Integer DNA with different digit sequences mapping to different points
+
+# Contracts
+
+Solidity code encapsulated in Contracts
+
+contract HelloWorld {
+
+}
+
+
+----------
+
+Solidity has compiler. All source code should start with version pragma to prevent issues 
+with future compilers
+
+"version pragma"
+
+pragma solidity ^0.4.25;
