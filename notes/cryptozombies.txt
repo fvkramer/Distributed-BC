@@ -92,3 +92,41 @@ function(string _name, uint _dna) {
 people.push(Person(16, "Vitalik"));
 
 ^ pushes into array an instance of new Person struct
+
+
+--------
+
+By default, functions are public
+Therefore, anyone or any other contract can call your contract's functions
+
+
+Private Functions
+
+function _addToArray(uint _number) private {
+  numbers.push(_number)
+}
+
+private functions start with underscore
+
+# Cont.
+
+string greeting = "What's up dog";
+
+function sayHello() public returns (string) {
+  return greeting;
+}
+
+function declaration contains return type
+
+View Function - views data in app but does not modify
+Pure Function - does not even access data in app
+
+sayHello is a view function
+
+function sayHello() public view returns (string) {}
+
+function _multiply(uint a, uint b) private pure returns (uint) {
+  return a * b;
+}
+
+Above function return value only depends on passed parameters
